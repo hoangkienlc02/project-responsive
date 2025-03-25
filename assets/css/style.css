@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    --color-box: #E2E2E2;
+    --color-background: #F1F1F1;
+    --color-text: #333333;
+    --font-1: "Be Vietnam Pro", sans-serif;
+    --font-2: "Lora", serif;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+/* container */
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* end-container */
+
+/* box */
+.box{
+    border-radius: 8px;
+    background-color: var(--color-box);
+    color: var(--color-text);
+    font-family: var(--font-1);
+    font-weight: 700;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* box */
+
+/* box-title */
+.box-title{
+    background-color: var(--color-box);
+    width: 600px;
+    height: 80px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-2);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px auto;
+}
+/* box-title */
+
+/* header */
+.header{
+    padding: 20px 0;
+}
+.header .inner-wrap{
+    display: flex; /*flex cũng hỗ trợ thuộc tính gap*/
+    align-items: center;
+    gap: 0 30px;
+}
+.header .inner-logo{
+    width: 200px;
+    height: 60px;
+    
+}
+.header .inner-menu{
+    /* Thực tế menu sẽ không fix cứng cho nên phải sử dụng thuộc tính flex: 1; để menu chiếm hết phần còn lại của khối header */
+    /* width: 820px; */
+    flex: 1;
+    height: 34px;  
+}
+.header .inner-button{
+    width: 120px;
+    height: 42px;
+}
+/* end-header */
+
+/* section-1 */
+.section-1{
+    background-color: var(--color-background);
+    padding: 80px 0;
+}
+.section-1 .inner-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+}
+.section-1 .inner-content, .section-1 .inner-image{
+    height: 520px;
+}
+/* section-1 */
+
+/* section-2 */
+.section-2{
+    padding: 80px 0;
+}
+.section-2 .inner-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.section-2 .inner-item{
+    height: 420px;
+}
+/* section-2 */
+
+/* section-3 */
+.section-3{
+    background-color: var(--color-background);
+    padding: 80px 0;
+}
+.section-3 .inner-wrap{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 30px;
+}
+.section-3 .inner-item{
+    height: 300px;
+}
+/* section-3 */
+
+/* section-4 */
+.section-4{
+    padding: 80px 0;
+}
+.section-4 .inner-wrap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 30px;
+}
+.section-4 .inner-item{
+    height: 300px;
+}
+/* section-4 */
+
+/* footer */
+.footer{
+    background-color: #D9D9D9;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+}
+/* footer */
