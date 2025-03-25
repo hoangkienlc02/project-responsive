@@ -147,5 +147,6 @@ a{
     align-items: center;
     justify-content: center;
     height: 72px;
+    font-family: var(--font-1);
 }
 /* footer */
