@@ -19,9 +19,30 @@ a{
 /* container */
 .container{
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
+@media (max-width: 1230px) {
+    .container{
+        width: 720px;
+    }
+}
+/* Có thể sử dụng cú pháp này nhưng nhiều trình duyệt cũ chưa hỗ trợ cú pháp mới này */
+/* @media (width <= 1230px) {
+    .container{
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */
+
+@media (max-width: 750px){
+    .container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 /* end-container */
 
 /* box */
@@ -36,7 +57,7 @@ a{
     align-items: center;
     justify-content: center;
 }
-/* box */
+/* End-box */
 
 /* box-title */
 .box-title{
@@ -53,7 +74,14 @@ a{
     justify-content: center;
     margin: 0 auto 40px auto;
 }
-/* box-title */
+@media (max-width: 1230px){
+    .box-title{
+        width: 100%;
+        margin-bottom: 30px;
+        height: 60px;
+    }
+}
+/* End-box-title */
 
 /* header */
 .header{
@@ -62,12 +90,12 @@ a{
 .header .inner-wrap{
     display: flex; /*flex cũng hỗ trợ thuộc tính gap*/
     align-items: center;
+    justify-content: space-between;
     gap: 0 30px;
 }
 .header .inner-logo{
     width: 200px;
     height: 60px;
-    
 }
 .header .inner-menu{
     /* Thực tế menu sẽ không fix cứng cho nên phải sử dụng thuộc tính flex: 1; để menu chiếm hết phần còn lại của khối header */
@@ -79,7 +107,55 @@ a{
     width: 120px;
     height: 42px;
 }
-/* end-header */
+
+@media (max-width: 1230px){
+    .header{
+        padding: 15px 0;
+    }
+    .header .inner-wrap{
+        display: flex; /*flex cũng hỗ trợ thuộc tính gap*/
+        align-items: center;
+        gap: 0 30px;
+    }
+    .header .inner-logo{
+        width: 130px;
+        height: 42px;
+    }
+    .header .inner-menu{
+        flex: 1;
+        height: 30px;
+    }
+    .header .inner-button{
+        width: 102px;
+        height: 36px;
+    }
+}
+
+/* khi responsive cho màn hình điện thoại thì khi thẻ cha là display:flex thì nên dùng thuộc tính order để sắp xếp lại các khối code bên trong  */
+@media (max-width: 750px){
+    .header{
+        padding: 15px 0;
+    }
+    .header .inner-logo{
+        width: 130px;
+        height: 42px;
+        order: 2;
+    }
+    .header .inner-menu{
+        width: 66px;
+        height: 36px;
+        order: 1;
+        flex: none;
+        font-size: 16px;
+    }
+    .header .inner-button{
+        width: 102px;
+        height: 36px;
+        order: 3;
+        font-size: 16px;
+    }
+}
+/* End-header */
 
 /* section-1 */
 .section-1{
@@ -94,7 +170,26 @@ a{
 .section-1 .inner-content, .section-1 .inner-image{
     height: 520px;
 }
-/* section-1 */
+
+@media (max-width: 1230px){
+    .section-1{
+        padding: 45px 0;
+    }
+    .section-1 .inner-content, .section-1 .inner-image{
+        height: 310px;
+    }
+}
+@media (max-width: 750px){
+    .section-1{
+        padding: 45px 0;
+    }
+    .section-1 .inner-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+}
+/* End-section-1 */
 
 /* section-2 */
 .section-2{
@@ -108,7 +203,28 @@ a{
 .section-2 .inner-item{
     height: 420px;
 }
-/* section-2 */
+
+@media (max-width: 1230px){
+    .section-2{
+        padding: 60px 0;
+    }
+    .section-2 .inner-wrap{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+@media (max-width: 750px){
+    .section-2{
+        padding: 45px 0;
+    }
+    .section-2 .inner-wrap{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+/* End-section-2 */
 
 /* section-3 */
 .section-3{
@@ -123,7 +239,34 @@ a{
 .section-3 .inner-item{
     height: 300px;
 }
-/* section-3 */
+
+@media (max-width: 1230px){
+    .section-3{
+        padding: 60px 0;
+    }
+    .section-3 .inner-wrap{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    .section-3 .inner-item{
+        height: 300px;
+    }
+}
+@media (max-width: 720px){
+    .section-3{
+        padding: 45px 0;
+    }
+    .section-3 .inner-wrap{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .section-3 .inner-item{
+        height: 300px;
+    }
+}
+/* End-section-3 */
 
 /* section-4 */
 .section-4{
@@ -137,7 +280,23 @@ a{
 .section-4 .inner-item{
     height: 300px;
 }
-/* section-4 */
+
+@media (max-width: 1230px){
+    .section-4{
+        padding: 60px 0;
+    }
+    .section-4 .inner-wrap{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+@media (max-width: 1230px){
+    .section-4{
+        padding: 45px 0;
+    }
+}
+/* End-section-4 */
 
 /* footer */
 .footer{
@@ -151,4 +310,4 @@ a{
     font-weight: 700;
     font-size: 20px;
 }
-/* footer */
+/* End-footer */
